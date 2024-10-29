@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 from config import config
 from extensiones import db, cors, jwt
@@ -6,11 +7,14 @@ from routes import auth_bp, usuarios_bp, encuestas_bp, respuestas_bp, opciones_b
 app = Flask(__name__)
 app.config.from_object(config['Desarrollo'])
 
-db.init_app(app)
-jwt.init_app(app)
-cors.init_app(app, resources={r"/*": {"origins": "http://localhost:3000"}},
-              allow_headers=["Content-Type", "Authorization"],  
-              supports_credentials=True)
+if os.getenv("FLASK_ENV") == "production":
+    cors.init_app(app, resources={r"/*": {"origins": "*"}},  
+                  allow_headers=["Content-Type", "Authorization"],
+                  supports_credentials=True)
+else:
+    cors.init_app(app, resources={r"/*": {"origins": "http://localhost:3000"}},
+                  allow_headers=["Content-Type", "Authorization"],
+                  supports_credentials=True)
 
 app.register_blueprint(auth_bp)
 app.register_blueprint(usuarios_bp)
