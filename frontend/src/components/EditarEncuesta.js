@@ -42,7 +42,7 @@ function EditarEncuesta() {
       })),
     };
 
-    fetch(`http://localhost:5000/encuestas/${id}`, {
+    fetch(`https://encretro.onrender.com/encuestas/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
