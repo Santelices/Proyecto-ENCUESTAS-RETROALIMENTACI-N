@@ -7,6 +7,11 @@ from routes import auth_bp, usuarios_bp, encuestas_bp, respuestas_bp, opciones_b
 app = Flask(__name__)
 app.config.from_object(config['Desarrollo'])
 
+@app.route("/")
+def home():
+    return "Bienvenido al backend de la aplicación de encuestas"
+
+
 if os.getenv("FLASK_ENV") == "production":
     cors.init_app(app, resources={r"/*": {"origins": "*"}},  
                   allow_headers=["Content-Type", "Authorization"],
