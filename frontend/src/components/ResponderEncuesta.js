@@ -45,7 +45,7 @@ function ResponderEncuesta() {
       return;
     }
 
-    fetch(`http://localhost:5000/encuestas/${id_unico}/responder`, {
+    fetch(`https://encretro.onrender.com/encuestas/${id_unico}/responder`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -4,7 +4,7 @@ function ContadorVisitas() {
   const [visitas, setVisitas] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:5000/registrar-visita", {
+    fetch("https://encretro.onrender.com/registrar-visita", {
       method: "POST",
     })
       .then(response => response.json())

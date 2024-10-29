@@ -18,7 +18,7 @@ function ResultadosEncuesta() {
   const [resultados, setResultados] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/encuestas/${encuesta_id}/resultados`, {
+    fetch(`https://encretro.onrender.com/encuestas/${encuesta_id}/resultados`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },

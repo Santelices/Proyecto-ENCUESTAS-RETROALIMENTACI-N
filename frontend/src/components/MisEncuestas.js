@@ -9,7 +9,7 @@ function MisEncuestas() {
 
   // Cargar las encuestas desde el backend cuando se monta el componente
   useEffect(() => {
-    fetch("http://localhost:5000/encuestas", {
+    fetch("https://encretro.onrender.com/encuestas", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
@@ -26,7 +26,7 @@ function MisEncuestas() {
   // Función para eliminar encuestas seleccionadas
   const eliminarSeleccionadas = () => {
     selectedEncuestas.forEach((id) => {
-      fetch(`http://localhost:5000/encuestas/${id}`, {
+      fetch(`https://encretro.onrender.com/encuestas/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -85,7 +85,7 @@ function MisEncuestas() {
 
   // Función para copiar el enlace al portapapeles
   const copiarEnlace = (id_unico) => {
-    const url = `http://localhost:3000/encuestas/${id_unico}/responder`;
+    const url = `https://encretro.onrender.com/encuestas/${id_unico}/responder`;
     navigator.clipboard
       .writeText(url)
       .then(() => alert("Enlace copiado al portapapeles"))

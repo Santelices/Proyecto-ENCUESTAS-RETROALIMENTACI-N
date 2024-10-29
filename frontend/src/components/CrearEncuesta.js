@@ -55,7 +55,7 @@ function CrearEncuesta() {
       preguntas,
     };
     
-    fetch('http://localhost:5000/encuestas', {
+    fetch('https://encretro.onrender.com/encuestas', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

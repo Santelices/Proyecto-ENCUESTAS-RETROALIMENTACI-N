@@ -8,7 +8,7 @@ function VistaPrevia() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/encuestas/${id}`, {
+    fetch(`https://encretro.onrender.com/encuestas/${id}`, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`,
       },
