@@ -6,6 +6,7 @@ from routes import auth_bp, usuarios_bp, encuestas_bp, respuestas_bp, opciones_b
 
 app = Flask(__name__)
 app.config.from_object(config['Desarrollo'])
+db.init_app(app)
 
 @app.route("/")
 def home():
