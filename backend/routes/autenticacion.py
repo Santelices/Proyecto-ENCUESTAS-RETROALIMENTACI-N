@@ -11,6 +11,7 @@ auth_bp = Blueprint('auth_bp', __name__)
 @auth_bp.route('/register', methods=['POST'])
 def register():
     data = request.json
+    print("Datos recibidos:", data)  # Esto mostrará los datos en los logs de Render
     nombre = data.get('nombre')
     apellido = data.get('apellido')
     email = data.get('email')
