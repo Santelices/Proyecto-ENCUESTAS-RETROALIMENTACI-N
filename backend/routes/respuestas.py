@@ -6,30 +6,11 @@ from extensiones import db
 from datetime import datetime
 
 respuestas_bp = Blueprint('respuestas_bp', __name__)
-
-@respuestas_bp.route('/encuestas/<string:id_unico>', methods=['GET'])
-def obtener_encuesta(id_unico):
-    # Obtener la encuesta por su ID único
-    encuesta = Encuesta.query.filter_by(id_unico=id_unico).first_or_404()
-
-    # Obtener las preguntas de la encuesta
-    preguntas = encuesta.preguntas  # Suponiendo que `preguntas` es la relación en el modelo `Encuesta`
-    preguntas_serializadas = [
-        {
-            'id': pregunta.id,
-            'texto': pregunta.texto,
-            'tipo': pregunta.tipo  # Aquí puedes añadir más detalles según tu modelo de pregunta
-        }
-        for pregunta in preguntas
-    ]
-    return jsonify({
-        'encuesta': {
-            'id': encuesta.id,
-            'titulo': encuesta.titulo,
-            'descripcion': encuesta.descripcion,
-            'preguntas': preguntas_serializadas
-        }
-    }), 200
+# Obtener todas las respuestas de una pregunta específica
+@respuestas_bp.route('/preguntas/<int:pregunta_id>/respuestas', methods=['GET'])
+def obtener_respuestas_por_pregunta(pregunta_id):
+    respuestas = Respuesta.query.filter_by(pregunta_id=pregunta_id).all()
+    return jsonify([respuesta.serialize() for respuesta in respuestas])
 
 # Endpoint para guardar una respuesta a una encuesta
 @respuestas_bp.route('/encuestas/<string:id_unico>/responder', methods=['POST'])
