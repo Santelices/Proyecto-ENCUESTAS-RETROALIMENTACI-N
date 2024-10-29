@@ -25,12 +25,22 @@ function RegisterForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://encretro.onrender.com/register', formData);
+      const response = await axios.post('https://encretro.onrender.com/register', formData, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
       setMessage(response.data.message);
     } catch (error) {
-      setMessage('Error en el registro. Inténtalo de nuevo.');
+      // Si hay un error de respuesta, obtén el mensaje desde el backend
+      if (error.response && error.response.data && error.response.data.message) {
+        setMessage(error.response.data.message);
+      } else {
+        setMessage('Error en el registro. Inténtalo de nuevo.');
+      }
     }
   };
+  
 
   return (
     <div className="register-container">
