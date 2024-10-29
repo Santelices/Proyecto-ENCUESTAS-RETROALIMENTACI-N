@@ -42,8 +42,7 @@ function App() {
             <Route path="/" element={<HeroSection />} />
             <Route path="/login" element={<Login onLogin={handleLogin} />} />
             <Route path="/register" element={<RegisterForm />} />
-            <Route path="/encuestas/:id_unico/responder" element={<ResponderEncuesta/>} />
-
+            <Route path="/encuestas/:id_unico/responder" element={<ResponderEncuesta />} /> {/* Usa esta para responder encuestas */}
             {/* Rutas protegidas */}
             {token ? (
               <>
