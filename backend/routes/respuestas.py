@@ -7,12 +7,6 @@ from datetime import datetime
 
 respuestas_bp = Blueprint('respuestas_bp', __name__)
 
-# Obtener todas las respuestas de una pregunta especifica
-@respuestas_bp.route('/preguntas/<int:pregunta_id>/respuestas', methods=['GET'])
-def obtener_respuestas_por_pregunta(pregunta_id):
-    respuestas = Respuesta.query.filter_by(pregunta_id=pregunta_id).all()
-    return jsonify([respuesta.serialize() for respuesta in respuestas])
-
 # Endpoint para guardar una respuesta a una encuesta
 @respuestas_bp.route('/encuestas/<string:id_unico>/responder', methods=['POST'])
 def responder_encuesta(id_unico):
@@ -27,7 +21,7 @@ def responder_encuesta(id_unico):
         return jsonify({'error': 'La encuesta ya ha alcanzado el límite de respuestas y está cerrada.'}), 403
 
     # Con esto se verifica si la IP ya ha respondido a esta encuesta
-    respuesta_existente = Respuesta.query.filter_by(encuesta_id=encuesta.id, ip_usuario=ip_usuario).first()
+    respuesta_existente = RespuestaEncuesta.query.filter_by(encuesta_id=encuesta.id, ip_usuario=ip_usuario).first()
     if respuesta_existente:
         return jsonify({'error': 'Ya has respondido a esta encuesta'}), 403
 

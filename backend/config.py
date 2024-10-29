@@ -1,5 +1,8 @@
+import os
+
 class DesarrolloConfig():
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///EncuestasBD.db'
+    SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL", "sqlite:///EncuestasBD.db")    
+    #postgresql://encubd_user:85iD46uCoxCXJGdkvaPjDnhZrS6uLSFu@dpg-csg1gid6l47c739lksrg-a.oregon-postgres.render.com/encubd
     SQLALCHEMY_TRACK_MODIFICATIONS= False 
     DEBUG=False
     JSON_SORT_KEYS = False

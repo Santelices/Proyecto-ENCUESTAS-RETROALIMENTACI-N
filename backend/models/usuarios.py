@@ -8,7 +8,7 @@ class Usuario(db.Model):
     nombre = db.Column(db.String(50), nullable=False)
     apellido = db.Column(db.String(50), nullable=False)
     email = db.Column(db.String(100), unique=True, nullable=False)
-    password_hash = db.Column(db.String(128), nullable=False) 
+    password_hash = db.Column(db.String(256), nullable=False) 
     fecha_registro = db.Column(db.DateTime, default=db.func.current_timestamp(), nullable=False)
     
     encuestas = db.relationship('Encuesta', backref='usuario', lazy=True)

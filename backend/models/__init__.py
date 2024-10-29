@@ -1,3 +1,4 @@
+from extensiones import db
 from .usuarios import Usuario
 from .encuestas import Encuesta
 from .preguntas import Pregunta
