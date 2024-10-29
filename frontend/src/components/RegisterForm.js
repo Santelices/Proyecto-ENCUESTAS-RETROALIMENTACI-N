@@ -25,7 +25,7 @@ function RegisterForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/register', formData);
+      const response = await axios.post('http://encretro.onrender.com/register', formData);
       setMessage(response.data.message);
     } catch (error) {
       setMessage('Error en el registro. Inténtalo de nuevo.');
