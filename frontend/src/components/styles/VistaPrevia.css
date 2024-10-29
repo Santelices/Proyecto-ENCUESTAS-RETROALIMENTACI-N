@@ -1,0 +1,125 @@
+.encuesta-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.encuesta-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.encuesta-header h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.encuesta-header p {
+  box-sizing: border-box;
+  font-size: 18px;
+  color: #666;
+  white-space: normal; 
+  overflow-wrap: break-word; 
+  text-align: center; 
+  margin: 10px 0; 
+  max-width: 100%; 
+}
+
+.input-respuesta-texto {
+  width: 100%; 
+  max-width: 100%; 
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; 
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+.preguntas-container-VP {
+  margin-top: 20px;
+}
+
+.pregunta-item-VP {
+  background-color: #fff;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  font-size: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pregunta-item p {
+  font-size: 1.4em; 
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.opciones-container-VP {
+  margin-left: 20px; 
+  padding-top: 5px; 
+}
+
+.pregunta-item ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.pregunta-item li {
+  margin-bottom: 8px;
+}
+
+.opcion-item-VP {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.opcion-item input[type="checkbox"],
+.opcion-item input[type="radio"] {
+  margin-right: 10px;
+}
+
+.input-respuesta-texto {
+  width: 100%;
+  padding: 8px;
+  font-size: 17px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.submit-btn {
+  display: inline-block;
+  background-color: #ffd700;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+}

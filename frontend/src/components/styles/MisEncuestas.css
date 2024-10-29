@@ -1,0 +1,140 @@
+.mis-encuestas {
+  width: 80%;
+  max-width: 900px; 
+  margin: 10px auto; 
+}
+
+.titulo-mis-encuestas {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+.encuestas-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.encuestas-table th, .encuestas-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.encuestas-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.encuestas-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.encuestas-table td {
+  word-wrap: break-word;
+  max-width: 300px;
+}
+
+.encuesta-button {
+  padding: 6px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  font-size: 0.9rem; 
+}
+
+.encuesta-button.editar {
+  background-color: #28a745;
+  margin: 5px;
+}
+
+.encuestas-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.encuestas-table th, .encuestas-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.encuestas-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.encuesta-button.eliminar {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.encuesta-button.compartir {
+  background-color: #007bff;
+  margin: 5px;
+}
+
+.encuesta-button.vista-previa {
+  background-color: #17a2b8;
+}
+
+.encuesta-button:hover {
+  opacity: 0.9;
+}
+
+.encuesta-button.resultados {
+  background-color: #3CB371; 
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.encuesta-button.resultados {
+  background-color: #2E8B57; 
+}
+
+
+.encuesta-button.volver {
+  background-color: #ffd700;  
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.encuesta-button.volver:hover {
+  background-color: #E0A800;  
+}
+
+/* Ajustes en móviles para mejorar la experiencia */
+@media (max-width: 768px) {
+  .mis-encuestas {
+    width: 95%;
+  }
+
+  .encuestas-table th, .encuestas-table td {
+    padding: 8px;
+  }
+
+  .encuesta-button {
+    padding: 5px 8px;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,91 @@
+.crear-encuesta-container {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+.input-field {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+  
+.agregar-pregunta-btn, .guardar-encuesta-btn, .eliminar-pregunta-btn {
+  background-color: #ffd700;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-left: 10px;
+}
+
+.agregar-pregunta-btn:hover {
+  background-color: #e0a800;
+}
+
+.eliminar-pregunta-btn:hover {
+  background-color: #e04343;
+}
+
+.guardar-encuesta-btn:hover {
+  background-color: #45a049;
+}
+
+  
+.opcion {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+  
+.opcion input {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+  
+.agregar-opcion-btn {
+  background-color: #ffd700;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  margin-top: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.agregar-opcion-btn:hover {
+  background-color: #218838;
+}
+
+.pregunta-form {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+  
+.select-field {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
