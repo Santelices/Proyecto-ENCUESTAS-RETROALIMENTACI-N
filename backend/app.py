@@ -13,7 +13,7 @@ def home():
 
 
 if os.getenv("FLASK_ENV") == "production":
-    cors.init_app(app, resources={r"/*": {"origins": "*"}},  
+    cors.init_app(app, resources={r"/*": {"origins": "https://encretrofront.onrender.com"}},  
                   allow_headers=["Content-Type", "Authorization"],
                   supports_credentials=True)
 else:
