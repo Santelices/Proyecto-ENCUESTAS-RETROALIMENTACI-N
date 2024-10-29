@@ -16,6 +16,7 @@ cors.init_app(app, resources={r"/*": {"origins": "https://encretrofront.onrender
               allow_headers=["Content-Type", "Authorization"],
               supports_credentials=True)
 
+jwt.init_app(app)
 
 app.register_blueprint(auth_bp)
 app.register_blueprint(usuarios_bp)
