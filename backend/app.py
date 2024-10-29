@@ -12,15 +12,10 @@ db.init_app(app)
 def home():
     return "Bienvenido al backend de la aplicación de encuestas"
 
+cors.init_app(app, resources={r"/*": {"origins": "https://encretrofront.onrender.com"}},
+              allow_headers=["Content-Type", "Authorization"],
+              supports_credentials=True)
 
-if os.getenv("FLASK_ENV") == "production":
-    cors.init_app(app, resources={r"/*": {"origins": "https://encretrofront.onrender.com"}},  
-                  allow_headers=["Content-Type", "Authorization"],
-                  supports_credentials=True)
-else:
-    cors.init_app(app, resources={r"/*": {"origins": "http://localhost:3000"}},
-                  allow_headers=["Content-Type", "Authorization"],
-                  supports_credentials=True)
 
 app.register_blueprint(auth_bp)
 app.register_blueprint(usuarios_bp)
