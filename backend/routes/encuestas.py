@@ -8,7 +8,7 @@ from extensiones import db
 encuestas_bp = Blueprint('encuestas_bp', __name__)
 
 # Obtener encuesta con preguntas usando id_unico para compartir
-@encuestas_bp.route('/encuestas/<string:id_unico>/responder', methods=['GET'])
+@encuestas_bp.route('/encuestas/compartir/<string:id_unico>', methods=['GET'])
 def obtener_encuesta_por_id_unico(id_unico):
     encuesta = Encuesta.query.filter_by(id_unico=id_unico).first_or_404()
     preguntas = Pregunta.query.filter_by(encuesta_id=encuesta.id).all()

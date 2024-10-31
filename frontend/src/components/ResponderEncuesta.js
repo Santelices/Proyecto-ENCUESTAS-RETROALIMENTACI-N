@@ -10,7 +10,7 @@ function ResponderEncuesta() {
 
   // Cargar la encuesta desde el backend
   useEffect(() => {
-    fetch(`https://encretro.onrender.com/encuestas/${id_unico}/responder`)
+    fetch(`https://encretro.onrender.com/compartir/${id_unico}`)
       .then((response) => response.json())
       .then((data) => setEncuesta(data))
       .catch((error) => console.error("Error al cargar la encuesta:", error));
