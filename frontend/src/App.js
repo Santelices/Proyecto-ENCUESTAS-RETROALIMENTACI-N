@@ -11,7 +11,7 @@ import EditarEncuesta from './components/EditarEncuesta';
 import VistaPrevia from './components/VistaPrevia';
 import ResponderEncuesta from './components/ResponderEncuesta';
 import ResultadosEncuesta from './components/Resultados';
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { HashRouter, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Header token={token} onLogout={handleLogout} />
         <div className="main-content">
           <Routes>
@@ -60,7 +60,7 @@ function App() {
           </Routes>
         </div>
         <Footer token={token}/>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
