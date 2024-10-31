@@ -11,7 +11,7 @@ import EditarEncuesta from './components/EditarEncuesta';
 import VistaPrevia from './components/VistaPrevia';
 import ResponderEncuesta from './components/ResponderEncuesta';
 import ResultadosEncuesta from './components/Resultados';
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter as Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 
 function App() {
@@ -43,6 +43,7 @@ function App() {
             <Route path="/login" element={<Login onLogin={handleLogin} />} />
             <Route path="/register" element={<RegisterForm />} />
             <Route path="/encuestas/:id_unico/responder" element={<ResponderEncuesta />} /> 
+            
             {/* Rutas protegidas */}
             {token ? (
               <>
