@@ -11,7 +11,7 @@ import EditarEncuesta from './components/EditarEncuesta';
 import VistaPrevia from './components/VistaPrevia';
 import ResponderEncuesta from './components/ResponderEncuesta';
 import ResultadosEncuesta from './components/Resultados';
-import { BrowserRouter as Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 
 function App() {
