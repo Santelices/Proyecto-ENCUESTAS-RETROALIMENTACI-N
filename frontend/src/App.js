@@ -52,6 +52,7 @@ function App() {
                 <Route path="/mis-encuestas" element={<MisEncuestas />} /> 
                 <Route path="/editar-encuesta/:id" element={<EditarEncuesta/>} />
                 <Route path="/vista-previa/:id" element={<VistaPrevia />} />
+                <Route path="/encuestas/compartir/:id_unico" element={<ResponderEncuesta/>} />
                 <Route path="/encuestas/:encuesta_id/resultados" element={<ResultadosEncuesta />} />
               </>
             ) : (

@@ -85,7 +85,7 @@ function MisEncuestas() {
 
   // Función para copiar el enlace al portapapeles
   const copiarEnlace = (id_unico) => {
-    const url = `https://encretrofront.onrender.com/encuestas/${id_unico}/responder`;
+    const url = `https://encretrofront.onrender.com/#/encuestas/${id_unico}/responder`;
     navigator.clipboard
       .writeText(url)
       .then(() => alert("Enlace copiado al portapapeles"))
