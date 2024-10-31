@@ -12,8 +12,8 @@ respuestas_bp = Blueprint('respuestas_bp', __name__)
 def responder_encuesta(id_unico):
     # Obtener la encuesta por su ID unico
     encuesta = Encuesta.query.filter_by(id_unico=id_unico).first_or_404()
-    ip_usuario = request.remote_addr
-
+    ip_usuario = request.headers.get('X-Forwarded-For', request.remote_addr)
+    
     # Limite de respuestas
     total_respuestas = RespuestaEncuesta.query.filter_by(encuesta_id=encuesta.id).count()  
 
