@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 
 function ResponderEncuesta() {
   const { id_unico } = useParams(); // Captura el id_unico de la URL
-  const navigate = useNavigate(); // Para redirigir después de enviar
+  const navigate = useNavigate(); 
   const [encuesta, setEncuesta] = useState(null);
   const [respuestas, setRespuestas] = useState({});
   const [errores, setErrores] = useState([]);
